@@ -1,0 +1,38 @@
+class Magazine:
+    def __init__(self, title, genre):
+        self.title = title
+        self.genre = genre
+
+class Reader:
+    def __init__(self, name):
+        self.name = name
+        self.reading_history = {}
+        self.liked_genres = set()
+
+    def read_magazine(self, magazine, percent_read):
+        self.reading_history[magazine.title] = percent_read
+        if percent_read >= 10:
+            print(f"{self.name} has read {percent_read}% of '{magazine.title}' and likes it!")
+            self.liked_genres.add(magazine.genre)
+        else:
+            print(f"{self.name} has read {percent_read}% of '{magazine.title}'.")
+
+    def recommend_magazines(self, all_magazines):
+        recommendations = [mag for mag in all_magazines if mag.genre in self.liked_genres]
+        print(f"Based on {self.name}'s preferences, we recommend the following magazines:")
+        for mag in recommendations:
+            print(f"- {mag.title}")
+
+# eg
+mag1 = Magazine("Vogue", "Fashion")
+mag2 = Magazine("Cosmopolitan", "Lifestyle")
+mag3 = Magazine("GQ", "Men's Fashion")
+mag4 = Magazine("Elle", "Fashion")
+mag5 = Magazine("Esquire", "Men's Lifestyle")
+
+reader = Reader("Alice")
+reader.read_magazine(mag1, 12)  # Alice reads 12% of Vogue
+reader.read_magazine(mag2, 8)   # Alice reads 8% of Cosmopolitan
+
+all_magazines = [mag1, mag2, mag3, mag4, mag5]
+reader.recommend_magazines(all_magazines)  # Recommend magazines based on Alice's liked genres
