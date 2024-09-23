@@ -1,4 +1,4 @@
-##Description
+## Description
 
 This document contains four recommendations, one of which uses ResNet-50 for image recommendations， 
 name: resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5
@@ -15,7 +15,7 @@ image_features_embedding_101.pkl
 img_files.pkl
 img_files_101.pkl
 
-##Dataset
+## Dataset
 
 Fashion Product Images (Small)
 Dataset link：https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-small
