@@ -25,7 +25,7 @@ img_files.pkl
 img_files_101.pkl
 
 
-Unity sence（ .unity) document should be opened by Unity Hub
+Unity scene（ .unity) document should be opened by Unity Hub
 
 ## Dataset
 
