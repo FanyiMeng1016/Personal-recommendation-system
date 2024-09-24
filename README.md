@@ -24,6 +24,9 @@ img_files.pkl
 
 img_files_101.pkl
 
+
+Unity sence（ .unity) document should be opened by Unity Hub
+
 ## Dataset
 
 Fashion Product Images (Small)
